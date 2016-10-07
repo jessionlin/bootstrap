@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+</head>
+<body>
+<ul class="nav nav-pills">
+    <li class="active" id="li_1" onclick="change(1)"><a href="#">商品介绍</a></li>
+    <li id="li_2" onclick="change(2)"><a href="#">规格参数</a></li>
+    <li id="li_3" onclick="change(3)"><a href="#">商品评价</a></li>
+    <li id="li_4" onclick="change(4)"><a href="#">售后保证</a></li>
+</ul>
+</body>
+<script type="text/javascript">
+function change(num){
+	var li_1 = document.getElementById("li_1");
+var li_2 = document.getElementById("li_2");
+var li_3 = document.getElementById("li_3");
+var li_4 = document.getElementById("li_4");
+var arr=new Array(0,0,0,0);
+var list = new Array(li_1,li_2,li_3,li_4);
+for(var i = 0;i <  4 ; i++){
+	if((i+1)==num){
+		arr[i]=1;
+	}
+	if(arr[i]==1){
+		list[i].className="active";
+	}
+	else{
+		list[i].className="";
+	}
+}
+}
+
+</script>
+</html>
